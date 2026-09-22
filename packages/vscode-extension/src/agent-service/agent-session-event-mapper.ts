@@ -47,6 +47,7 @@ export class AgentSessionEventMapper {
 							text: "",
 							working: true,
 							timestamp: event.message.timestamp,
+							startedAt: event.message.timestamp,
 						},
 					});
 				} else if (event.message.role === "user") {
@@ -83,7 +84,7 @@ export class AgentSessionEventMapper {
 						...(failed ? { role: "error" as const } : {}),
 						text,
 						working: false,
-						timestamp: event.message.timestamp,
+						timestamp: Date.now(),
 						outputTokens: event.message.usage.output,
 					});
 					this.assistantMessageId = undefined;

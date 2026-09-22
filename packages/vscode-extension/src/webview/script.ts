@@ -1,11 +1,11 @@
 export function getWebviewScript(
-  highlighterScriptUri: string,
-  mermaidScriptUri: string,
-  scriptNonce: string,
-  styleNonce: string,
-  avatarUri: string,
+	highlighterScriptUri: string,
+	mermaidScriptUri: string,
+	scriptNonce: string,
+	styleNonce: string,
+	avatarUri: string,
 ): string {
-  return `			const vscode = acquireVsCodeApi();
+	return `			const vscode = acquireVsCodeApi();
 		const assistantAvatarUri = ${JSON.stringify(avatarUri)};
 		let nextRequestId = 0;
 		const requestTimeoutMs = 60000;

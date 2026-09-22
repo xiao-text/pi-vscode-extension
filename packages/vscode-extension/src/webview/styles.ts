@@ -1,5 +1,5 @@
 export function getWebviewStyles(): string {
-  return `		body {
+	return `		body {
 			padding: 0;
 			margin: 0;
 			color: var(--vscode-foreground);

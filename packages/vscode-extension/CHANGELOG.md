@@ -6,6 +6,10 @@
 
 - Added a footer to assistant messages in chat: response duration and output token count (with icons) on the left, message time on the right. Duration and token count are also shown for messages restored from session history.
 
+### Fixed
+
+- Fixed live assistant response durations using the response start timestamp for both endpoints, and preserved duration metadata when the chat state is refreshed.
+
 ## [0.0.8] - 2026-09-15
 
 ### Fixed
